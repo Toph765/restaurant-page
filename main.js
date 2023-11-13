@@ -1,0 +1,1 @@
+document.body.appendChild(function(){const e=document.querySelector("#content"),t=document.createElement("header"),n=(document.createElement("main"),["Home","Menu","Contact"]);for(let e=0;e<n.length;e++){const o=document.createElement("div");o.textContent=n[e],t.appendChild(o)}return e.appendChild(t),e}());
