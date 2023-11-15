@@ -17,9 +17,14 @@ content.appendChild(header);
 document.body.appendChild(renderHomePage());
 
 const menuTab = document.querySelector('.Menu');
-console.log(menuTab);
+const homeTab = document.querySelector('.Home');
 
 menuTab.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     document.body.appendChild(renderMenuPage());
+})
+
+homeTab.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    document.body.appendChild(renderHomePage());
 })
