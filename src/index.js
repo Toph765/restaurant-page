@@ -1,5 +1,6 @@
 import { renderHomePage } from "./homePage.js";
 import { renderMenuPage } from "./menuPage.js";
+import { renderContactPage } from "./contactPage.js";
 
 const content = document.querySelector('#content');
 const header = document.createElement('header');
@@ -18,6 +19,7 @@ document.body.appendChild(renderHomePage());
 
 const menuTab = document.querySelector('.Menu');
 const homeTab = document.querySelector('.Home');
+const contactTab = document.querySelector('.Contact');
 
 menuTab.addEventListener('click', () => {
     content.removeChild(content.lastChild);
@@ -27,4 +29,9 @@ menuTab.addEventListener('click', () => {
 homeTab.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     document.body.appendChild(renderHomePage());
+})
+
+contactTab.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    document.body.appendChild(renderContactPage());
 })
