@@ -44,9 +44,10 @@ function renderMenuPage() {
         }
         div.append(image, name, price);
         main.appendChild(div);
-
-        content.appendChild(main);
     }
+
+    content.appendChild(main);
+    return content;
 }
 
 export { renderMenuPage };
