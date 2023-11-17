@@ -11,8 +11,12 @@ function renderContactPage() {
             div.textContent = 'E-mail: re-baratie@email.com'
         } else if (contactContent[i] === 'reservation') {
             const form = document.createElement('form');
+            const text = document.createElement('h3');
             const btn = document.createElement('button');
             const formContent = ['name', 'telephone', 'email', 'number', 'textarea'];
+
+            text.textContent = 'Make a reservation!';
+            form.appendChild(text);
 
             for (let j = 0; j < formContent.length; j++) {
                 const divForm = document.createElement('div');

@@ -1,7 +1,7 @@
 
 function renderHomePage() {
     const main = document.createElement('main');
-    const mainContent = ["image", "name", "text"];
+    const mainContent = ["image", "name", "text", "schedule"];
 
     for (let j = 0; j < mainContent.length ; j++) {
         if (mainContent[j] === 'image') {
@@ -17,6 +17,10 @@ function renderHomePage() {
             const description = document.createElement('div');
             description.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt repellat incidunt ducimus facilis, accusantium aperiam reprehenderit, nam quia, molestiae perferendis in possimus optio rerum maxime? Dolorem culpa ipsum ullam!'
             main.appendChild(description);
+        } else if (mainContent[j] === 'schedule') {
+            const schedule = document.createElement('div');
+            schedule.textContent = 'Tuesday - Friday: 10:00am - 8:00pm Saturday & Sunday: 10am - 12:00pm';
+            main.appendChild(schedule);
         }
     }
 
