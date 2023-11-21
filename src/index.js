@@ -1,6 +1,7 @@
 import { renderHomePage } from "./homePage.js";
 import { renderMenuPage } from "./menuPage.js";
 import { renderContactPage } from "./contactPage.js";
+import './style.css';
 
 const content = document.querySelector('#content');
 const header = document.createElement('header');
