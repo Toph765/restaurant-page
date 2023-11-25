@@ -10,7 +10,8 @@
 
 body {
     font-family: 'lora';
-    background-color: yellowgreen;
+    background: url('./img/5498933.jpg');
+    background-position: center center;
 }
 
 #content {
