@@ -18,7 +18,7 @@ function renderHomePage() {
         } else if (mainContent[j] === 'text') {
             const description = document.createElement('div');
             description.classList.add('homeText');
-            description.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt repellat incidunt ducimus facilis, accusantium aperiam reprehenderit, nam quia, molestiae perferendis in possimus optio rerum maxime? Dolorem culpa ipsum ullam!'
+            description.textContent = 'Experience the culinary wonders of the world of One Piece!'
             main.appendChild(description);
         } else if (mainContent[j] === 'schedule') {
             const schedule = document.createElement('div');
