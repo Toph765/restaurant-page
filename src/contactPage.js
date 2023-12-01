@@ -1,5 +1,11 @@
 function renderContactPage() {
     const main = document.createElement('main');
+    const title = document.createElement('h1');
+
+    title.textContent = 'Contact';
+    title.classList.add('title');
+    main.appendChild(title);
+
     const contactContent = ['telephone', 'email', 'reservation'];
 
     for (let i= 0; i < contactContent.length; i++) {
@@ -7,12 +13,15 @@ function renderContactPage() {
 
         if (contactContent[i] === 'telephone') {
             div.textContent = 'Cellphone No.: 777-7777-777';
+            div.classList.add('contactPhone');
         } else if (contactContent[i] === 'email') {
-            div.textContent = 'E-mail: re-baratie@email.com'
+            div.textContent = 'E-mail: re-baratie@email.com';
+            div.classList.add('contactEmail');
         } else if (contactContent[i] === 'reservation') {
             const form = document.createElement('form');
             const text = document.createElement('h3');
             const btn = document.createElement('button');
+            const formInput = document.createElement('div');
             const formContent = ['name', 'telephone', 'email', 'number', 'textarea'];
 
             text.textContent = 'Make a reservation!';
@@ -21,6 +30,7 @@ function renderContactPage() {
             for (let j = 0; j < formContent.length; j++) {
                 const divForm = document.createElement('div');
                 const label = document.createElement('label');
+
                 if (formContent[j] === 'name') {
                     const name = document.createElement('input');
                     name.setAttribute('id', 'name');
@@ -66,11 +76,12 @@ function renderContactPage() {
                     label.textContent = 'Comments/Suggestions: ';
                     divForm.append(label, text);
                 }
-                form.appendChild(divForm);
+                formInput.appendChild(divForm);
             }
 
             btn.textContent = 'Submit';
-            form.appendChild(btn);
+            form.append(formInput, btn);
+            div.classList.add('contactForm');
             div.appendChild(form);
         }
         main.append(div);
