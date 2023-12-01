@@ -33,10 +33,20 @@ body {
 }
 
 button {
+    background-color: #F8FFD2;
     font-family: 'lora';
     border-style: none;
     border: 3px solid var(--accent-color);
     padding: 12px 20px;
+}
+
+button:hover {
+    background-color:  #edff84;
+    font-weight: bold;
+}
+
+button:active {
+    background-color: #F8FFD2;
 }
 
 header {
@@ -68,10 +78,15 @@ main {
 
 .homeText,
 .homeSchedule {
-    width: 100%;
+    width: 90vw;
     background-color: rgba(245, 245, 245, 0.6);
     font-size: 1.2rem;
     padding: 16px;
+    text-align: center;
+}
+
+.homeText {
+    font-weight: bold;
 }
 
 .homeSchedule {
